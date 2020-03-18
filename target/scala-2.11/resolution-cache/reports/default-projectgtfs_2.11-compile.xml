@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="projectgtfs_2.11"
+		revision="0.1"
+		conf="compile"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
+		date="20200226182140"/>
+	<dependencies>
+		<module organisation="com.opencsv" name="opencsv">
+			<revision name="5.1" status="release" pubdate="20200202160019" resolver="public" artresolver="public" homepage="http://opencsv.sf.net" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="29841" time="203" location="/home/bd-user/.ivy2/cache/com.opencsv/opencsv/ivy-5.1.xml" searched="true" original-local-location="/home/bd-user/.ivy2/cache/com.opencsv/opencsv/ivy-5.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/opencsv/opencsv/5.1/opencsv-5.1.pom"/>
+				<caller organisation="default" name="projectgtfs_2.11" conf="compile" rev="5.1" rev-constraint-default="5.1" rev-constraint-dynamic="5.1" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="opencsv" type="jar" ext="jar" status="successful" details="" size="200354" time="514" location="/home/bd-user/.ivy2/cache/com.opencsv/opencsv/jars/opencsv-5.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/opencsv/opencsv/5.1/opencsv-5.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-collections4">
+			<revision name="4.4" status="release" pubdate="20190705141018" resolver="public" artresolver="public" homepage="https://commons.apache.org/proper/commons-collections/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="23784" time="129" location="/home/bd-user/.ivy2/cache/org.apache.commons/commons-collections4/ivy-4.4.xml" searched="true" original-local-location="/home/bd-user/.ivy2/cache/org.apache.commons/commons-collections4/ivy-4.4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.pom"/>
+				<caller organisation="com.opencsv" name="opencsv" conf="default, compile, runtime, master" rev="4.4" rev-constraint-default="4.4" rev-constraint-dynamic="4.4" callerrev="5.1"/>
+				<artifacts>
+					<artifact name="commons-collections4" type="jar" ext="jar" status="successful" details="" size="751914" time="500" location="/home/bd-user/.ivy2/cache/org.apache.commons/commons-collections4/jars/commons-collections4-4.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-beanutils" name="commons-beanutils">
+			<revision name="1.9.4" status="release" pubdate="20190728181654" resolver="public" artresolver="public" homepage="https://commons.apache.org/proper/commons-beanutils/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="18005" time="171" location="/home/bd-user/.ivy2/cache/commons-beanutils/commons-beanutils/ivy-1.9.4.xml" searched="true" original-local-location="/home/bd-user/.ivy2/cache/commons-beanutils/commons-beanutils/ivy-1.9.4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.pom"/>
+				<caller organisation="com.opencsv" name="opencsv" conf="default, compile, runtime, master" rev="1.9.4" rev-constraint-default="1.9.4" rev-constraint-dynamic="1.9.4" callerrev="5.1"/>
+				<artifacts>
+					<artifact name="commons-beanutils" type="jar" ext="jar" status="successful" details="" size="246918" time="457" location="/home/bd-user/.ivy2/cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.9.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-collections" name="commons-collections">
+			<revision name="3.2.2" status="release" pubdate="20151112181126" resolver="public" artresolver="public" homepage="http://commons.apache.org/collections/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="12403" time="116" location="/home/bd-user/.ivy2/cache/commons-collections/commons-collections/ivy-3.2.2.xml" searched="true" original-local-location="/home/bd-user/.ivy2/cache/commons-collections/commons-collections/ivy-3.2.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.pom"/>
+				<caller organisation="commons-beanutils" name="commons-beanutils" conf="compile, runtime" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="1.9.4"/>
+				<artifacts>
+					<artifact name="commons-collections" type="jar" ext="jar" status="successful" details="" size="588337" time="253" location="/home/bd-user/.ivy2/cache/commons-collections/commons-collections/jars/commons-collections-3.2.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-logging" name="commons-logging">
+			<revision name="1.2" status="release" pubdate="20140705141228" resolver="public" artresolver="public" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="19206" time="139" location="/home/bd-user/.ivy2/cache/commons-logging/commons-logging/ivy-1.2.xml" searched="true" original-local-location="/home/bd-user/.ivy2/cache/commons-logging/commons-logging/ivy-1.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom"/>
+				<caller organisation="commons-beanutils" name="commons-beanutils" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="1.9.4"/>
+				<artifacts>
+					<artifact name="commons-logging" type="jar" ext="jar" status="successful" details="" size="61829" time="291" location="/home/bd-user/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-text">
+			<revision name="1.8" status="release" pubdate="20190830155706" resolver="public" artresolver="public" homepage="https://commons.apache.org/proper/commons-text" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="16418" time="130" location="/home/bd-user/.ivy2/cache/org.apache.commons/commons-text/ivy-1.8.xml" searched="true" original-local-location="/home/bd-user/.ivy2/cache/org.apache.commons/commons-text/ivy-1.8.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.8/commons-text-1.8.pom"/>
+				<caller organisation="com.opencsv" name="opencsv" conf="default, compile, runtime, master" rev="1.8" rev-constraint-default="1.8" rev-constraint-dynamic="1.8" callerrev="5.1"/>
+				<artifacts>
+					<artifact name="commons-text" type="jar" ext="jar" status="successful" details="" size="207030" time="481" location="/home/bd-user/.ivy2/cache/org.apache.commons/commons-text/jars/commons-text-1.8.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.8/commons-text-1.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-lang3">
+			<revision name="3.9" status="release" pubdate="20190410213039" resolver="public" artresolver="public" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="28379" time="134" location="/home/bd-user/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.9.xml" searched="true" original-local-location="/home/bd-user/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.pom"/>
+				<caller organisation="com.opencsv" name="opencsv" conf="default, compile, runtime, master" rev="3.9" rev-constraint-default="3.9" rev-constraint-dynamic="3.9" callerrev="5.1"/>
+				<caller organisation="org.apache.commons" name="commons-text" conf="compile, runtime" rev="3.9" rev-constraint-default="3.9" rev-constraint-dynamic="3.9" callerrev="1.8"/>
+				<artifacts>
+					<artifact name="commons-lang3" type="jar" ext="jar" status="successful" details="" size="503880" time="260" location="/home/bd-user/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.tototoshi" name="scala-csv_2.11">
+			<revision name="1.3.6" status="release" pubdate="20190609215903" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/tototoshi/scala-csv" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3067" time="0" location="/home/bd-user/.ivy2/cache/com.github.tototoshi/scala-csv_2.11/ivy-1.3.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/tototoshi/scala-csv_2.11/1.3.6/scala-csv_2.11-1.3.6.pom"/>
+				<caller organisation="default" name="projectgtfs_2.11" conf="compile" rev="1.3.6" rev-constraint-default="1.3.6" rev-constraint-dynamic="1.3.6" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="scala-csv_2.11" type="jar" ext="jar" status="no" details="" size="53838" time="0" location="/home/bd-user/.ivy2/cache/com.github.tototoshi/scala-csv_2.11/jars/scala-csv_2.11-1.3.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/tototoshi/scala-csv_2.11/1.3.6/scala-csv_2.11-1.3.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.11.8" status="release" pubdate="20160304102633" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2653" time="0" location="/home/bd-user/.ivy2/cache/org.scala-lang/scala-library/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.pom"/>
+				<caller organisation="com.github.tototoshi" name="scala-csv_2.11" conf="default, compile, runtime, master" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.3.6"/>
+				<caller organisation="default" name="projectgtfs_2.11" conf="compile" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5744974" time="0" location="/home/bd-user/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
