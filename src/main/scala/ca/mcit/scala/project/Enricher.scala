@@ -1,12 +1,29 @@
 package ca.mcit.scala.project
 
+import java.io.BufferedInputStream
+
+import org.apache.hadoop.conf.Configuration
+import org.apache.hadoop.fs.{ FileSystem, Path}
+
 import scala.collection.mutable.ListBuffer
 import scala.io.{BufferedSource, Source}
 
 object Enricher extends App {
 
+  val conf = new Configuration()
+  conf.addResource(new Path ("/home/bd-user/opt/hadoop-2.7.3/etc/cloudera/core-site.xml"))
+  conf.addResource(new Path ("/home/bd-user/opt/hadoop-2.7.3/etc/cloudera/hdfs-site.xml"))
+  val fs: FileSystem= FileSystem.get(conf)
+
+  val trippath =new Path("/user/fall2019/snehith/projectgtfs/trips.txt")
+  val routepath =new Path("/user/fall2019/snehith/projectgtfs/routes.txt")
+  val calenderpath = new Path("/user/fall2019/snehith/projectgtfs/calendar.txt")
+
+  val tripdata = new BufferedInputStream(fs.open(trippath))
   val tripsource: BufferedSource = Source.
-    fromFile("/home/bd-user/Documents/trips.txt")
+    fromInputStream(tripdata)
+
+    //fromFile("/home/bd-user/Documents/trips.txt")
 
   val tripList: List[Trip] = tripsource
     .getLines()
@@ -15,8 +32,10 @@ object Enricher extends App {
     .map(f=>f.split(","))
     .map(p => Trip(p(0).toInt, p(1), p(2), p(3), p(4), p(5), p(6))).toList
 
+  val routedata = new BufferedInputStream(fs.open(routepath))
    val routesource: BufferedSource = Source.
-    fromFile("/home/bd-user/Documents/routes.txt")
+     fromInputStream(routedata)
+    //fromFile("/home/bd-user/Documents/routes.txt")
 
     val routeList: List[Route] = routesource
       .getLines()
@@ -29,8 +48,10 @@ object Enricher extends App {
 
   val enrichedTripRoute : List[TripRoute] = tripList.map(trip => TripRoute(trip,routeLookup.lookup(trip.route_id)))
 
+  val calenderdata = new BufferedInputStream(fs.open(calenderpath))
   val calendarsource : BufferedSource= Source
-    .fromFile("/home/bd-user/Documents/calendar.txt")
+    .fromInputStream(calenderdata)
+   // .fromFile("/home/bd-user/Documents/calendar.txt")
   val calenderList: List[Calender] = calendarsource
     .getLines()
     .drop(1)
