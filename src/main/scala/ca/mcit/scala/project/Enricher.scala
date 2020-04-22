@@ -15,9 +15,9 @@ object Enricher extends App {
   conf.addResource(new Path ("/home/bd-user/opt/hadoop-2.7.3/etc/cloudera/hdfs-site.xml"))
   val fs: FileSystem= FileSystem.get(conf)
 
-  val trippath =new Path("/user/fall2019/snehith/projectgtfs/trips.txt")
-  val routepath =new Path("/user/fall2019/snehith/projectgtfs/routes.txt")
-  val calenderpath = new Path("/user/fall2019/snehith/projectgtfs/calendar.txt")
+  val trippath =new Path("/user/fall2019/snehith/projectgtfs/stm/trips.txt")
+  val routepath =new Path("/user/fall2019/snehith/projectgtfs/stm/routes.txt")
+  val calenderpath = new Path("/user/fall2019/snehith/projectgtfs/stm/calendar.txt")
 
   val tripdata = new BufferedInputStream(fs.open(trippath))
   val tripsource: BufferedSource = Source.

@@ -1,6 +1,6 @@
 package ca.mcit.scala.project
 
-import java.io.{File, FileWriter, OutputStreamWriter}
+import java.io.OutputStreamWriter
 
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileSystem, Path}
@@ -36,7 +36,7 @@ class DataWriter(enrichedList: List[EnrichedTrip]) {
           w.tripRoute.trip.note_en.toString, w.tripRoute.route.agency_id,
           w.tripRoute.route.route_short_name, w.tripRoute.route.route_long_name,
           w.tripRoute.route.route_type, w.tripRoute.route.route_url,
-          w.tripRoute.route.route_color.toString, w.calender.monday,
+          w.tripRoute.route.route_color, w.calender.monday,
           //w.calender.tuesday.toString, w.calender.wednesday.toString,
           // w.calender.thursday.toString, w.calender.friday.toString,
           //w.calender.saturday.toString, w.calender.sunday.toString,
