@@ -1,10 +1,8 @@
 package ca.mcit.scala.project
 
 import java.io.OutputStreamWriter
-
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileSystem, Path}
-//import com.github.tototoshi.csv.CSVWriter
 import com.opencsv._
 
 
@@ -14,16 +12,13 @@ class DataWriter(enrichedList: List[EnrichedTrip]) {
   conf.addResource(new Path ("/home/bd-user/opt/hadoop-2.7.3/etc/cloudera/hdfs-site.xml"))
   val fs: FileSystem= FileSystem.get(conf)
 
-  val path = "/user/fall2019/snehith/projectgtfs/output/output.csv"
-  //var file: File = new File(Path)
-
-
+  val path = "/user/fall2019/snehith/course3/output.csv"
     val out = new OutputStreamWriter(fs.create(new Path(path), true))
     val writer: CSVWriter = new CSVWriter(out)
     val csvSchema: Array[String] = Array("Route Id", "Service Id", "Trip Id", "Trip Head Sign", "Direction Id",
       "Shape Id", "Wheelchair accessible", "Note_FR", "Note En", "Agency Id",
       "Route Short Name", "Route Long Name", "Route Type", "Route Url", "Route Colour",
-      "Monday", //"Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
+      "Monday",
       "Start Date", "End Date")
 
     def writeData(): Unit = {
@@ -37,9 +32,6 @@ class DataWriter(enrichedList: List[EnrichedTrip]) {
           w.tripRoute.route.route_short_name, w.tripRoute.route.route_long_name,
           w.tripRoute.route.route_type, w.tripRoute.route.route_url,
           w.tripRoute.route.route_color, w.calender.monday,
-          //w.calender.tuesday.toString, w.calender.wednesday.toString,
-          // w.calender.thursday.toString, w.calender.friday.toString,
-          //w.calender.saturday.toString, w.calender.sunday.toString,
           w.calender.start_date, w.calender.end_date
         )
         writer.writeNext(data)
